@@ -4,5 +4,7 @@
   <p>{{item}}</p>
 {{/each}}
 
-{{input value=item placeholder="Add New Item to List"}}
-<input type="submit" id ="add-button" value="Add Item" {{action "sendDataToController" listId item}}/>
+
+<form {{action "sendDataToController" listId item on="submit"}}>
+  {{input value=item placeholder="Add New Item to List"}}
+</form>

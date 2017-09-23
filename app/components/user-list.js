@@ -5,7 +5,6 @@ export default Ember.Component.extend({
     sendDataToController(listId, item) {
       this.sendAction('newItem', listId, item);
       this.set("item", "")
-
     }
   }
 });

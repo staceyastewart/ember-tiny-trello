@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     newList() {
-      // alert(this.get("text"))
       this.get("model").pushObject({
         id: (this.get("model").length + 1),
         title: this.get("text"),
@@ -13,6 +12,7 @@ export default Ember.Controller.extend({
     },
     newItem(listId) {
       // alert(listId)
+      // alert(this.get("item"))
       // alert(this.get("item"))
       this.get("model")[listId-1].items.addObject(
         this.get("item")

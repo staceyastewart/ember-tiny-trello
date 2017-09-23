@@ -10,14 +10,10 @@ export default Ember.Controller.extend({
       })
       this.set("text", "")
     },
-    newItem(listId) {
-      // alert(listId)
-      // alert(this.get("item"))
-      // alert(this.get("item"))
+    newItem(listId, item) {
       this.get("model")[listId-1].items.addObject(
-        this.get("item")
+        item
       )
-      this.set("item", "")
     }
   }
 });

@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   model(){
     return [
       {
-        title: "Default Board"
+        title: "Default Board",
+        items: ["first", "second"]
       }
     ]
   }

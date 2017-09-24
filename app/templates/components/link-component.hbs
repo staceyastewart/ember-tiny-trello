@@ -1,5 +1,10 @@
-<span onClick={{action "sendDataToController"}}>
-  {{#link-to link}}
-    {{linkText}}
-  {{/link-to}}
-</span>
+{{#if isAdding}}
+  <!--make below line reusable  -->
+  {{input value=text enter="sendDataToController" placeholder="Name Your New List"}}
+{{else}}
+  <span onClick={{action "toggleIsAdding"}}>
+    {{#link-to link}}
+      {{linkText}}
+    {{/link-to}}
+  </span>
+{{/if}}

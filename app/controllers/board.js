@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    newList() {
+    newList(input) {
       console.log("hitting")
       this.get("model").pushObject({
         id: (this.get("model").length + 1),
-        title: this.get("text"),
+        title: input,
         items: []
       })
       this.set("text", "")

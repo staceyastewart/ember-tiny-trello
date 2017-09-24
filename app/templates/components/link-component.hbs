@@ -1,6 +1,13 @@
 {{#if isAdding}}
   <!--make below line reusable  -->
-  {{input value=text enter="sendDataToController" placeholder="Name Your New List"}}
+  {{#if form}}
+    <!-- <form {{!action "sendDataToController" listId item on="submit"}}>
+      {{!input value=item placeholder="Add New Item to List"}}
+    </form> -->
+  {{else}}
+    {{input value=text enter="sendDataToController" placeholder="Name Your New List"}}
+    {{!form-component placeholder="Add A New List" actionable=newList}}
+  {{/if}}
 {{else}}
   <span onClick={{action "toggleIsAdding"}}>
     {{#link-to link}}

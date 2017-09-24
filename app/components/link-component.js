@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   isAdding: false,
   actions: {
     sendDataToController() {
+      console.log(this.get("text"))
       let input = this.get("text")
       this.sendAction('newList', input);
       this.set("text", "")

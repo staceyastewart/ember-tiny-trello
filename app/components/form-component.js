@@ -5,9 +5,10 @@ export default Ember.Component.extend({
     sendDataToController() {
       console.log("form controller")
       console.log(this.get("text"))
-      let input = this.get("text")
-      this.sendAction("newList", "hello");
-      // this.set("text", "")
+      this.attrs.newList(this.get("text"))
+      // let input = this.get("text")
+      // this.sendAction("newList", input);
+      this.set("text", "")
       // this.send("toggleIsAdding")
     }
   }

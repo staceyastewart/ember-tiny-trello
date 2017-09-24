@@ -8,4 +8,7 @@
   </div>
 {{/each}}
 
-{{link-component addInput="addInput" newList="newList" newItem="newItem" linkText="Add A List" }}
+{{link-component addInput="addInput" newItem="newItem" linkText="Add A List" newList=(action "newList")}}
+
+
+{{!form-component placeholder="Add A New List" newList=(action "newList")}}

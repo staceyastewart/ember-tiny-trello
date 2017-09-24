@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     newList(input) {
-      console.log("hitting")
+      console.log("hitting new list")
       this.get("model").pushObject({
         id: (this.get("model").length + 1),
         title: input,
@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
       )
     },
     addInput(){
-      console.log("HERE")
+      console.log("Adding Input")
       this.get("model").pushObject({
         id: (this.get("model").length + 1),
         title: "User Added List",

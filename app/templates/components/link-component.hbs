@@ -5,12 +5,12 @@
       {{!input value=item placeholder="Add New Item to List"}}
     </form> -->
     <!-- <h1>YES</h1> -->
-    {{form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem) listId=listId}}
+    {{form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem) listId=listId toggleIsAdding=(action "toggleIsAdding")}}
 
     {{!form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem)}}
   {{else}}
     {{!input value=text enter="sendDataToController" placeholder="Name Your New List"}}
-    {{form-component placeholder="Add A New List" newList=(action newList)}}
+    {{form-component placeholder="Add A New List" newList=(action newList) toggleIsAdding=(action "toggleIsAdding")}}
     <!-- <form {{!action "sendDataToController" actionable="actionable" on="submit"}}>
       {{!input value=text placeholder="Name new list" action="newList"}}
     </form> -->

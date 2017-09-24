@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         this.sendAction("newList", this.get("text"));
       }
       this.set("text", "")
-      // this.sendAction("toggleIsAdding")
+      this.sendAction("toggleIsAdding")
     }
   }
 });

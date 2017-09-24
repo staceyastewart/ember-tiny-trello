@@ -18,6 +18,11 @@ export default Ember.Controller.extend({
     },
     addInput(){
       console.log("HERE")
+      this.get("model").pushObject({
+        id: (this.get("model").length + 1),
+        title: "User Added List",
+        items: []
+      })
     }
   }
 });

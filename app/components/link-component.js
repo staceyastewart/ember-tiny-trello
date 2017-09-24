@@ -11,11 +11,13 @@ export default Ember.Component.extend({
       this.send("toggleIsAdding")
     },
     toggleIsAdding(){
+      console.log("hitting toggle function")
       if(this.get("isAdding") === false){
         this.set('isAdding', true)
       } else {
         this.set('isAdding', false)
       }
+      console.log("ends toggle")
     }
   }
 });

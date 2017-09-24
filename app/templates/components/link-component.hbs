@@ -1,14 +1,16 @@
 {{#if isAdding}}
   <!--make below line reusable  -->
-  {{#if form}}
+  {{#if item}}
     <!-- <form {{!action "sendDataToController" listId item on="submit"}}>
       {{!input value=item placeholder="Add New Item to List"}}
     </form> -->
-    {{form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem)}}
+    <!-- <h1>YES</h1> -->
+    {{form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem) listId=listId}}
+
+    {{!form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem)}}
   {{else}}
     {{!input value=text enter="sendDataToController" placeholder="Name Your New List"}}
     {{form-component placeholder="Add A New List" newList=(action newList)}}
-
     <!-- <form {{!action "sendDataToController" actionable="actionable" on="submit"}}>
       {{!input value=text placeholder="Name new list" action="newList"}}
     </form> -->

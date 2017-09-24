@@ -2,8 +2,10 @@
 
 {{list-item items=items}}
 
-<form {{action "sendDataToController" listId item on="submit"}}>
-  {{input value=item placeholder="Add New Item to List"}}
-</form>
+<!-- <form {{!action "sendDataToController" listId item on="submit"}}>
+  {{!input value=item placeholder="Add New Item to List"}}
+</form> -->
 
-{{!link-component newItem="newItem" linkText="Add An Item" form="true"}}
+{{!form-component placeholder="THIS ITEM PLACEHOLDER" newItem=(action newItem) listId=listId}}
+
+{{link-component addInput="addInput" linkText="Add A THING" newItem=(action newItem) item="true" listId=listId}}

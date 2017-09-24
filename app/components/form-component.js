@@ -5,11 +5,14 @@ export default Ember.Component.extend({
     sendDataToController() {
       console.log("form controller")
       console.log(this.get("text"))
-      this.attrs.newList(this.get("text"))
-      // let input = this.get("text")
-      // this.sendAction("newList", input);
+      console.log(this.get("listId"))
+      if(this.get("listId")){
+        this.attrs.newItem(this.get("listId"), this.get("text"))
+      } else {
+        this.sendAction("newList", this.get("text"));
+      }
       this.set("text", "")
-      // this.send("toggleIsAdding")
+      // this.sendAction("toggleIsAdding")
     }
   }
 });

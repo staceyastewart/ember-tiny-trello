@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
       this.set("text", "")
     },
     newItem(listId, item) {
-      this.get("model")[listId-1].items.addObject(
+      this.get("model")[listId-1].items.pushObject(
         item
       )
     },

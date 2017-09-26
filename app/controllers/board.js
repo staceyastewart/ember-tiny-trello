@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
       this.get("model")[listId-1].items.pushObject(
         {id: this.get("model")[listId-1].items.length-1,
         title: item,
-        description: "enter your description"}
+        description: "Enter your long description for this task here."}
       )
     }
   }

@@ -2,6 +2,11 @@
   {{#modal-dialog onClose="closeModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    Oh hai there!
+    <div class="modal-header">
+      <h1>{{item.title}}</h1>
+    </div>
+    <div class="modal-body">
+      <h1>{{item.description}}</h1>
+    </div>
   {{/modal-dialog}}
 {{/if}}

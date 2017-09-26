@@ -6,3 +6,8 @@
 // }
 
 @import "ember-bootstrap/bootstrap";
+
+.ember-modal-dialog{
+  height: 60vh;
+  width: 100vh;
+}

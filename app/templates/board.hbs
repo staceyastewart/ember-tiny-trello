@@ -1,10 +1,8 @@
 {{#each model as |list|}}
-  <div class="col-md-3">
-    <div class="panel panel-default text-center">
+  <div class="col-md-3 user-list text-center">
       <span class="border-top-0">
         {{user-list title=list.title items=list.items listId=list.id newItem=(action "newItem") deleteItem=(action "deleteItem")}}
       </span>
-    </div>
   </div>
 {{/each}}
 {{link-component newItem="newItem" linkText="Add A List" newList=(action "newList")}}

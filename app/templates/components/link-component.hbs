@@ -5,7 +5,7 @@
     {{form-component placeholder="Name Your List" newList=(action newList) toggleIsAdding=(action "toggleIsAdding") add="true"}}
   {{/if}}
 {{else}}
-  <span onClick={{action "toggleIsAdding"}}>
+  <span class="link" onClick={{action "toggleIsAdding"}}>
     {{#link-to link}}
       {{linkText}}
     {{/link-to}}

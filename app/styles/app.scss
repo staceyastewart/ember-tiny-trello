@@ -1,13 +1,24 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
-
-#full-app{
-  margin-top: 5vh;
-}
-
 @import "ember-bootstrap/bootstrap";
 
 .ember-modal-dialog{
   height: 60vh;
   width: 100vh;
+}
+
+#full-app{
+  margin-top: 5vh;
+}
+body{
+  background-color: #57ba86;
+}
+.user-list{
+  background-color: #e2e4e6;
+  margin: 1vh;
+  border-radius: 7px;
+  padding-bottom: 4vh;
+}
+.click-item{
+  transform: translateY(20%)
 }

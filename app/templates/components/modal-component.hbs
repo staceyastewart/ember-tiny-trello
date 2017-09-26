@@ -9,5 +9,6 @@
       {{form-component text=item.description listId=listId itemId=item.id}}
     </div>
     <button name="delete" {{action 'confirmDelete'}}>Delete</button>
+    <button name="close" {{action 'closeModal'}}>Close</button>
   {{/modal-dialog}}
-  {{/if}}
+{{/if}}

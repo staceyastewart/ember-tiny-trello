@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     newList(input) {
-      console.log("hitting new list")
       this.get("model").pushObject({
         id: (this.get("model").length + 1),
         title: input,
@@ -19,9 +18,6 @@ export default Ember.Controller.extend({
       )
     },
     deleteItem(listId, itemId){
-      console.log("hitting the delete item path")
-      console.log(listId)
-      console.log(itemId)
       let itemToDeleteIndex
       // first, find location of this item in current array, then delete
       for (var i = 0; i < this.get("model")[listId-1].items.length; i++) {
@@ -29,8 +25,6 @@ export default Ember.Controller.extend({
           itemToDeleteIndex = i
         }
       }
-      console.log("item to be deleted:")
-      console.log(itemToDeleteIndex)
       this.get("model")[listId-1].items.removeAt(itemToDeleteIndex)
     }
   }

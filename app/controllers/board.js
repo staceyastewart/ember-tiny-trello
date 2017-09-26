@@ -13,16 +13,10 @@ export default Ember.Controller.extend({
     },
     newItem(listId, item) {
       this.get("model")[listId-1].items.pushObject(
-        item
+        {id: this.get("model")[listId-1].items.length-1,
+        title: item,
+        description: "enter your description"}
       )
-    },
-    addInput(){
-      console.log("Adding Input")
-      this.get("model").pushObject({
-        id: (this.get("model").length + 1),
-        title: "User Added List",
-        items: []
-      })
     }
   }
 });

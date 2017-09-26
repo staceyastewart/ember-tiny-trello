@@ -7,7 +7,11 @@ export default Ember.Route.extend({
       {
         id: 1,
         title: "Default Board",
-        items: ["first task item"]
+        items: [
+          {id: 1,
+          title: "Most Important Task",
+          description: "Hire Stacey!"}
+      ]
       }
     ]
   }

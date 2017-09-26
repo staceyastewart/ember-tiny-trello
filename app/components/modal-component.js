@@ -7,6 +7,7 @@ export default Ember.Component.extend({
     },
     saveEditedItem(){
       // save item from form once edited
+      // this.sendAction("rerenderModal")
     }
   }
 });

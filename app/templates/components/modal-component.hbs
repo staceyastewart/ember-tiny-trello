@@ -3,12 +3,10 @@
                   targetAttachment="center"
                   translucentOverlay=true}}
     <div class="modal-header">
-      <h1>{{item.title}}</h1>
-      {{form-component placeholder=item.title listId=listId itemId=item.id editItem=(action editItem)}}
+      {{form-component text=item.title listId=listId itemId=item.id}}
     </div>
     <div class="modal-body">
-      <h1>{{item.description}}</h1>
-      {{form-component placeholder=item.description listId=listId itemId=item.id editItem=(action editItem)}}
+      {{form-component text=item.description listId=listId itemId=item.id}}
     </div>
   {{/modal-dialog}}
 {{/if}}

@@ -17,19 +17,6 @@ export default Ember.Controller.extend({
         title: item,
         description: "Enter your long description for this task here."}
       )
-    },
-    editItem(listId, id, title, description){
-      console.log("edit function")
-      console.log(this.get("model"))
-      console.log(this.get("model")[listId-1])
-      console.log(this.get("model")[listId-1].items[id-1])
-      console.log(listId)
-      this.get("model")[listId-1].items[id-1] = {
-        id: id,
-        title: title,
-        description: description
-      }
-      console.log(this.get("model")[listId-1].items[id-1])
     }
   }
 });

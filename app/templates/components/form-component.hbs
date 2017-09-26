@@ -1,3 +1,9 @@
-<form {{action "sendDataToController" actionable="actionable" on="submit"}}>
-  {{input value=text placeholder=placeholder listId="listId"}}
-</form>
+{{#if add}}
+  <form {{action "sendDataToController" on="submit"}}>
+    {{input value=text placeholder=placeholder listId="listId" itemId="itemId"}}
+  </form>
+{{else}}
+  <form {{action "editEachItem" on="submit"}}>
+    {{input value=text placeholder=placeholder listId="listId" itemId="itemId"}}
+  </form>
+{{/if}}

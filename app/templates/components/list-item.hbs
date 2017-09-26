@@ -1,9 +1,9 @@
 {{#each items as |item|}}
   <div class="col-md-12">
     <div class="panel panel-default text-center">
-      <span class="border-top-0">
-        <p>{{item}}</p>
-      </span>
+      <span class="border-top-0" >
+          {{clickable-item item=item listId=listId deleteItem=(action deleteItem)}}
+        </span>
     </div>
   </div>
 {{/each}}

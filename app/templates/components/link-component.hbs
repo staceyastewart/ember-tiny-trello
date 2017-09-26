@@ -1,8 +1,8 @@
 {{#if isAdding}}
   {{#if item}}
-    {{form-component placeholder="Name Your Item" newItem=(action newItem) listId=listId toggleIsAdding=(action "toggleIsAdding")}}
+    {{form-component placeholder="Name Your Item" newItem=(action newItem) listId=listId toggleIsAdding=(action "toggleIsAdding") add=true}}
   {{else}}
-    {{form-component placeholder="Name Your List" newList=(action newList) toggleIsAdding=(action "toggleIsAdding")}}
+    {{form-component placeholder="Name Your List" newList=(action newList) toggleIsAdding=(action "toggleIsAdding") add="true"}}
   {{/if}}
 {{else}}
   <span onClick={{action "toggleIsAdding"}}>

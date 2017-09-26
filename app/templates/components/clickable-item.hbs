@@ -1,0 +1,4 @@
+<span class="border-top-0" onClick={{action "openModal"}}>
+  <p>{{item.title}}</p>
+    {{modal-component item=item listId=listId deleteItem=(action deleteItem) modalOpen=modalOpen}}
+</span>

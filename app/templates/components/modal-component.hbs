@@ -1,0 +1,14 @@
+{{#if modalOpen}}
+  {{#modal-dialog onClose="closeModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    <div class="modal-header">
+      {{form-component text=item.title listId=listId itemId=item.id}}
+    </div>
+    <div class="modal-body">
+      {{form-component text=item.description listId=listId itemId=item.id}}
+    </div>
+    <button name="delete" {{action 'confirmDelete'}}>Delete</button>
+    <button name="close" {{action 'closeModal'}}>Close</button>
+  {{/modal-dialog}}
+{{/if}}

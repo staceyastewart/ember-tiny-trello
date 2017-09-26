@@ -17,6 +17,21 @@ export default Ember.Controller.extend({
         title: item,
         description: "Enter your long description for this task here."}
       )
+    },
+    deleteItem(listId, itemId){
+      console.log("hitting the delete item path")
+      console.log(listId)
+      console.log(itemId)
+      let itemToDeleteIndex
+      // first, find location of this item in current array, then delete
+      for (var i = 0; i < this.get("model")[listId-1].items.length; i++) {
+        if (this.get("model")[listId-1].items[i].id === itemId){
+          itemToDeleteIndex = i
+        }
+      }
+      console.log("item to be deleted:")
+      console.log(itemToDeleteIndex)
+      this.get("model")[listId-1].items.removeAt(itemToDeleteIndex)
     }
   }
 });

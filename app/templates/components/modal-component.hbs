@@ -8,7 +8,7 @@
     <div class="modal-body">
       {{form-component text=item.description listId=listId itemId=item.id}}
     </div>
-    <button name="delete" {{action 'confirmDelete'}}>Delete</button>
-    <button name="close" {{action 'closeModal'}}>Close</button>
+    <button class="btn-danger" name="delete" {{action 'confirmDelete'}}>Delete</button>
+    <button class="btn-success" name="close" {{action 'closeModal'}}>Close</button>
   {{/modal-dialog}}
 {{/if}}

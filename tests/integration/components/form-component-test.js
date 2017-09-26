@@ -8,6 +8,10 @@ moduleForComponent('form-component', 'Integration | Component | form component',
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
+  this.set("value", "sample")
+  this.set("listId", "1")
+  this.set("itemId", "1")
+  this.set("add", "true")
 
   this.render(hbs`{{form-component}}`);
 

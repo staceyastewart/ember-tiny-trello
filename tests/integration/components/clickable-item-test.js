@@ -12,7 +12,7 @@ moduleForComponent('clickable-item', 'Integration | Component | clickable item',
   integration: true
 });
 
-test("it renders", function(assert) {
+test("it renders with title", function(assert) {
   this.set("thing", item)
   this.set("list", "1")
   this.set("modalOpen", "true")
@@ -20,6 +20,6 @@ test("it renders", function(assert) {
   this.on("myAction", function() {
     return
   })
-  this.render(hbs`{{clickable-item item=thing listId=list deleteItem=myAction modalOpen=modalOpen}}`);
+  this.render(hbs`{{clickable-item item=thing listId=list deleteItem=(action 'myAction') modalOpen=modalOpen}}`);
   assert.equal(this.$(".item-title").text().trim(), 'Title');
 });

@@ -1,7 +1,9 @@
 {{#each model as |list|}}
-  <div class="col-md-3 user-list text-center">
+  <div class="col-md-4  text-center">
       <span class="border-top-0">
+        <div class="col-md-10 user-list text-center user-list">
         {{user-list title=list.title items=list.items listId=list.id newItem=(action "newItem") deleteItem=(action "deleteItem")}}
+        </div>
       </span>
   </div>
 {{/each}}

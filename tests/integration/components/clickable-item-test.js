@@ -1,24 +1,25 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import Ember from 'ember';
+
+let item = Ember.Object.create({
+      id: 1,
+      title: "Title",
+      description: "Long description"
+})
 
 moduleForComponent('clickable-item', 'Integration | Component | clickable item', {
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
+test("it renders", function(assert) {
+  this.set("thing", item)
+  this.set("list", "1")
+  this.set("modalOpen", "true")
   // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{clickable-item}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#clickable-item}}
-      template block text
-    {{/clickable-item}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.on("myAction", function() {
+    return
+  })
+  this.render(hbs`{{clickable-item item=thing listId=list deleteItem=myAction modalOpen=modalOpen}}`);
+  assert.equal(this.$(".item-title").text().trim(), 'Title');
 });

@@ -3,7 +3,7 @@
     {{input value=text placeholder=placeholder listId="listId" itemId="itemId"}}
   </form>
 {{else}}
-  <form {{action "editEachItem" on="submit"}}>
+  <form>
     {{input value=text placeholder=placeholder listId="listId" itemId="itemId" class="modal-form"}}
   </form>
 {{/if}}

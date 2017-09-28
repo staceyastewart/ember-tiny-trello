@@ -3,8 +3,8 @@
 @import "ember-bootstrap/bootstrap";
 
 .ember-modal-dialog{
-  height: 60vh;
-  width: 100vh;
+  height: 30vh;
+  width: 50vh;
 }
 
 #full-app{
@@ -23,11 +23,9 @@ body{
   transform: translateY(20%)
 }
 .modal-form{
-  width: 85vh;
+  width: 100%;
   border: 0;
-  // background-color: red;
 }
-.deleteBtn{
-  margin-left: 34vh;
-  margin-top: 23vh;
+.modal-body{
+  height: 43%;
 }

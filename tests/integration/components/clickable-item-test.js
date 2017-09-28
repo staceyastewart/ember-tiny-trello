@@ -16,10 +16,11 @@ test("it renders with title", function(assert) {
   this.set("thing", item)
   this.set("list", "1")
   this.set("modalOpen", "true")
-  // Handle any actions with this.on('myAction', function(val) { ... });
   this.on("myAction", function() {
     return
   })
   this.render(hbs`{{clickable-item item=thing listId=list deleteItem=(action 'myAction') modalOpen=modalOpen}}`);
   assert.equal(this.$(".item-title").text().trim(), 'Title');
+  assert.equal(this.get("thing.description"), "Long description");
+  assert.equal(this.get("thing.id"), "1");
 });

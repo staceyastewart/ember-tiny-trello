@@ -1,28 +1,25 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import Ember from 'ember';
+
+let items = Ember.Object.create({
+      id: 1,
+      title: "Title",
+      description: "Long description"
+})
 
 moduleForComponent('form-component', 'Integration | Component | form component', {
   integration: true
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-  this.set("value", "sample")
+  this.set("item", items)
   this.set("listId", "1")
-  this.set("itemId", "1")
-  this.set("add", "true")
+  // this.set("description", item.description)
 
-  this.render(hbs`{{form-component}}`);
+  this.render(hbs`{{form-component text=item.description listId=listId itemId=item.id}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#form-component}}
-      template block text
-    {{/form-component}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.get("listId"), "1");
+  assert.equal(this.get("item.id"), "1");
+  assert.equal(this.get("item.description"), "Long description");
 });
